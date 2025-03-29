@@ -45,17 +45,24 @@ ScrollReveal({
   delay: 200,
 });
 
-ScrollReveal().reveal(".home-content, .heading, .about-content p", {
-  origin: "top",
-});
+ScrollReveal().reveal(
+  ".home-content, .heading, .about-content p, .about-content",
+  {
+    origin: "top",
+  }
+);
+
 ScrollReveal().reveal(
   ".home-img, .services-container, .portfolio-box, .contact form",
-  { origin: "bottom" }
+  {
+    origin: "bottom",
+  }
 );
 
 ScrollReveal().reveal(".home-content h1, .about-img, .about-content h3", {
   origin: "left",
 });
+
 ScrollReveal().reveal(".home-content p, .about-content h2", { origin: "top" });
 
 /*========== Typed JS ========== */
