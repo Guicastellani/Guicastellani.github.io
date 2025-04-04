@@ -340,7 +340,7 @@ span {
 
 .portfolio-box:hover img {
   transform: scale(1.1);
-  opacity: 0.05;
+  opacity: 0.1;
 }
 
 .portfolio-box .portfolio-layer {
@@ -570,7 +570,7 @@ span {
 
   @media (max-width: 450px) {
     html {
-      font-size: 50%;
+      font-size: 55%;
     }
 
     .contact form .input-box input {
