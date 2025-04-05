@@ -76,7 +76,7 @@ const typed = new Typed(".multiple-text", {
 });
 
 /*========== Phone Mask ========== */
-function phoneMask(event) {
+phoneMask = (event) => {
   var valor =
     document.getElementById("tel").attributes[0].ownerElement["value"];
   var result = valor.replace(/\D/g, "");
@@ -97,4 +97,4 @@ function phoneMask(event) {
     }
   }
   document.getElementById("tel").attributes[0].ownerElement["value"] = result;
-}
+};
