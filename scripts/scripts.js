@@ -75,6 +75,14 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
+const typed2 = new Typed(".multiple-text2", {
+  strings: ["Frontend Developer", "Graphic Designer", "Video Editor"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
+
 /*========== Phone Mask ========== */
 phoneMask = (event) => {
   var valor =
