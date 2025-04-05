@@ -210,16 +210,18 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="#">
+    <form action="https://api.web3forms.com/submit" method="POST">
+
       <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="E-mail Address">
+        <input type="hidden" name="access_key" value="67ed1e67-6c06-449f-b89e-ce5957c4749c">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="E-mail Address" required>
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="E-mail Subject">
+        <input id="tel" name="tel" placeholder="Phone Number" onkeyup="phoneMask(event)">
+        <input type="text" name="subject" placeholder="E-mail Subject" required>
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
       <input type="submit" value="Send Message" class="btn">
     </form>
   </section>

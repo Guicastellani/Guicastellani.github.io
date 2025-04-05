@@ -74,3 +74,27 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+/*========== Phone Mask ========== */
+function phoneMask(event) {
+  var valor =
+    document.getElementById("tel").attributes[0].ownerElement["value"];
+  var result = valor.replace(/\D/g, "");
+  result = result.replace(/^0/, "");
+  if (result.length > 10) {
+    result = result.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+  } else if (result.length > 5) {
+    if (result.length == 6 && event.code == "Backspace") {
+      // necessário pois senão o "-" fica sempre voltando ao dar backspace
+      return;
+    }
+    result = result.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+  } else if (result.length > 2) {
+    result = result.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+  } else {
+    if (result.length != 0) {
+      result = result.replace(/^(\d*)/, "($1");
+    }
+  }
+  document.getElementById("tel").attributes[0].ownerElement["value"] = result;
+}
