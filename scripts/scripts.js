@@ -67,20 +67,18 @@ ScrollReveal().reveal(".home-content h1, .about-img, .about-content h3", {
 ScrollReveal().reveal(".home-content p, .about-content h2", { origin: "top" });
 
 /*========== Typed JS ========== */
-const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Developer", "Graphic Designer", "Video Editor"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
-});
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".multiple-text").forEach((el) => {
+    const strings = JSON.parse(el.getAttribute("data-text"));
 
-const typed2 = new Typed(".multiple-text2", {
-  strings: ["Frontend Developer", "Graphic Designer", "Video Editor"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
+    new Typed(el, {
+      strings: ["Frontend Developer", "Graphic Designer", "Video Editor"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true,
+    });
+  });
 });
 
 /*========== Phone Mask ========== */
